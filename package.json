@@ -4,8 +4,8 @@
   "description": "",
   "main": ".babelrc.js",
   "scripts": {
-    "build": "babel test.ts --out-file out.js",
-    "start": "node out.js"
+    "build": "babel test.ts --out-file out-babel.js && tsc --useDefineForClassFields test.ts --outFile out-tsc.js",
+    "run:babel": "node out-babel.js"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,8 @@
     "@babel/plugin-transform-react-jsx": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
-    "@babel/preset-typescript": "^7.21.0"
+    "@babel/preset-typescript": "^7.21.0",
+    "typescript": "^5.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.15.11"
