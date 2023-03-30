@@ -1,4 +1,4 @@
-import assert from 'node:assert';
+const assert = require('assert');
 
 {
   class Foo {
@@ -6,7 +6,6 @@ import assert from 'node:assert';
     value = this.incoming;
   }
 
-  console.log(new Foo(42).value)
   assert.equal(new Foo(42).value, 42);
 }
 
